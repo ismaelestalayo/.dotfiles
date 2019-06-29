@@ -28,7 +28,7 @@ install auto-suggestion plugin:
 
 ``` 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ismael/.oh-my-zsh"
+export ZSH="/home/USERNAME/.oh-my-zsh"
  
 # Set name of the theme to load
 ZSH_THEME="spaceship"
@@ -78,13 +78,25 @@ function lazygit() {
 # .vimrc
 
 ```
-colorscheme slate       # or koehler
+colorscheme slate
+colorscheme koehler
 set number 
-:syntax on 
+syntax on 
+
+set encoding=utf-8
+set pastetoggle=<F2>
+
+set scrolloff=3
+
+set wrap
+set textwidth=79
 
 set tabstop=4
-set scrolloff=3
-set pastetoggle=<F2>
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set ttyfast
 ```
 
 # .tmux.conf
@@ -92,4 +104,12 @@ set pastetoggle=<F2>
 ```
 # Enable mouse mode (tmux 2.1 and above) 
 set -g mouse on
+
+# Use Alt-arrow keys without prefix key to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
 ```
+
+
