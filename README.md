@@ -1,32 +1,63 @@
-# zsh (1)
+# Powershell
 
-install zsh:
+1- Install necessary modules:
 
-`sudo apt install zsh`
+```Powershell
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+```
 
+2- Then create a profile.ps1 with `notepad $PROFILE` and paste the following:
 
-
-install oh-my-zsh:
-
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-
-
-
-install spaceship prompt:
-
-`git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
-
-`ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme" `
+```Powershell
+Set-PSReadLineOption -EditMode Emacs
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+```
 
 
+3- (optional) If there's any problem with execution policies of the script at launch:
 
-install auto-suggestion plugin:
+```Powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
-`git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions`
+# zsh
 
-# .zshrc (2)
+1- First install zsh with
+```Bash
+sudo apt install zsh
+```
 
-``` 
+2- Then install oh-my-zsh
+
+```Bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+
+3- (optional) Install spaceship prompt:
+
+```Bash
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+```
+
+```Bash
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+
+
+
+4- (optional) install auto-suggestion plugin:
+
+```Bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+
+## .zshrc file
+
+```Bash
 # Path to your oh-my-zsh installation.
 export ZSH="/home/USERNAME/.oh-my-zsh"
  
@@ -75,9 +106,11 @@ function lazygit() {
 }
 ```
 
-# .vimrc
+# vim
 
-```
+## .vimrc file
+
+```Bash
 colorscheme slate
 colorscheme koehler
 set number 
@@ -99,9 +132,11 @@ set expandtab
 set ttyfast
 ```
 
-# .tmux.conf
+# tmux
 
-```
+## .tmux.conf
+
+```Bash
 # Enable mouse mode (tmux 2.1 and above) 
 set -g mouse on
 
@@ -111,5 +146,4 @@ bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 ```
-
 
