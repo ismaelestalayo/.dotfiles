@@ -1,5 +1,7 @@
 # Powershell
 
+Currently using the default PowerShell version shipped with Windows 10 (v 5.1.19041.1) which I've also customized thanks to the amazing [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) to be inline with my zsh prompt.
+
 1- Install necessary modules:
 
 ```Powershell
@@ -7,17 +9,17 @@ Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 ```
 
-2- Then create a profile.ps1 with `notepad $PROFILE` and paste the following:
+2- Then create/edit a profile.ps1 with `vim $PROFILE` (you can use notepad as well) and paste the following:
 
 ```Powershell
 Set-PSReadLineOption -EditMode Emacs
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme Paradox
+Set-Theme Avit
 ```
 
 
-3- (optional) If there's any problem with execution policies of the script at launch:
+*(optional)* If there's any problem with execution policies of the script at launch:
 
 ```Powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
