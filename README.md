@@ -1,6 +1,6 @@
 # Powershell
 
-Currently using the default PowerShell version shipped with Windows 10 (v 5.1.19041.1) which I've also customized thanks to the amazing [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) to be inline with my zsh prompt.
+Currently using the PowerShell 7.1 preview (from store for auto updates) which I've also customized to be inline with my zsh prompt.
 
 1- Install necessary modules:
 
@@ -14,8 +14,14 @@ Install-Module oh-my-posh -Scope CurrentUser
 ```Powershell
 Set-PSReadLineOption -EditMode Emacs
 Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Avit
+```
+
+3- Modify your prompt
+
+```Powersshell
+# Add a new line before and after your prompt
+$GitPromptSettings.DefaultPromptSuffix = '`n▶ '
+$GitPromptSettings.DefaultPromptPrefix = '`n'
 ```
 
 
@@ -25,6 +31,7 @@ Set-Theme Avit
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
+----
 
 # bash
 
@@ -104,19 +111,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 
 
-3- (optional) Install spaceship prompt:
-
-```Bash
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-```
-
-```Bash
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-```
-
-
-
-4- (optional) install auto-suggestion plugin:
+3- (optional) install auto-suggestion plugin:
 
 ```Bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -128,19 +123,19 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 # Path to your oh-my-zsh installation.
 export ZSH="/home/USERNAME/.oh-my-zsh"
  
-ZSH_THEME="spaceship"
+ZSH_THEME="avit"
 
-# DISABLE_LS_COLORS="true"
-# ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copyfile zsh-autosuggestions)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+
+cd
 ```
 
 # vim
@@ -167,20 +162,5 @@ set softtabstop=4
 set expandtab
 
 set ttyfast
-```
-
-# tmux
-
-## .tmux.conf
-
-```Bash
-# Enable mouse mode (tmux 2.1 and above) 
-set -g mouse on
-
-# Use Alt-arrow keys without prefix key to switch panes
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
 ```
 
