@@ -30,6 +30,101 @@ $GitPromptSettings.DefaultPromptPrefix = '`n'
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
+
+4- Personalize the Windows Terminal
+
+```json
+{
+	"$schema" : "https://aka.ms/terminal-profiles-schema",
+	"copyFormatting" : false,
+	"copyOnSelect" : true,
+	"defaultProfile" : "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+	"initialCols" : 80,
+	"initialRows" : 45,
+	
+	"theme": "light",
+	"titleLength" : "compact",
+	"useTabSwitcher": false,
+
+
+	"profiles" : 
+	{
+		"defaults" : 
+		{
+			"colorScheme": "Pencil Light",
+			"cursorColor" : "#808080",
+			"cursorShape" : "underscore",
+			"fontSize" : 10,
+			"tabColor": "#f1f1f1"
+		},
+		"list" : 
+		[
+			{
+				"commandline" : "powershell.exe",
+				"guid" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+				"hidden" : true,
+				"name" : "Windows PowerShell"
+			},
+			{
+				"guid" : "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+				"hidden" : false,
+				"icon" : "https://icons.iconarchive.com/icons/martz90/circle/512/ubuntu-icon.png",
+				"name" : "Ubuntu-20.04",
+				"source" : "Windows.Terminal.Wsl"
+			}
+		]
+	},
+	"schemes" : 
+	[
+		{
+			"background" : "#212121",
+			"black" : "#212121",
+			"blue" : "#006e99",
+			"brightBlack" : "#525252",
+			"brightBlue" : "#20bbfc",
+			"brightCyan" : "#4fb8cc",
+			"brightGreen" : "#5fd7af",
+			"brightPurple" : "#6855de",
+			"brightRed" : "#fb007a",
+			"brightWhite" : "#f1f1f1",
+			"brightYellow" : "#f3e430",
+			"cyan" : "#20a5ba",
+			"foreground" : "#f1f1f1",
+			"green" : "#10a778",
+			"name" : "Pencil Dark",
+			"purple" : "#523c79",
+			"red" : "#c30771",
+			"white" : "#d9d9d9",
+			"yellow" : "#a89c14"
+		},
+		{
+			"background" : "#f1f1f1",
+			"black" : "#212121",
+			"blue" : "#0079a8",
+			"brightBlack" : "#424242",
+			"brightBlue" : "#20bbfc",
+			"brightCyan" : "#4fb8cc",
+			"brightGreen" : "#5fd7af",
+			"brightPurple" : "#6855de",
+			"brightRed" : "#fb007a",
+			"brightWhite" : "#f1f1f1",
+			"brightYellow" : "#ead38b",
+			"cyan" : "#20a5ba",
+			"foreground" : "#424242",
+			"green" : "#10a778",
+			"name" : "Pencil Light",
+			"purple" : "#523c79",
+			"red" : "#ea437d",
+			"white" : "#494949",
+			"yellow" : "#a89c14"
+		},
+	],
+		
+
+
+
+```
+
 ----
 
 # bash
@@ -43,7 +138,7 @@ Lightweight personalized prompt:
 
 ```bash
 
-export PS1='\[\e[1;36m\] \n$PWD \[\e[1;35m\]`parse_git_branch` \n\[\e[1;37m\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\] '
+export PS1='\[\e[1;36m\] \n$PWD \[\e[1;35m\] \n\[\e[1;37m\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\] '
 ```
 
 It's always handy to make a few symbolic links to the Windows files you wanna access:
