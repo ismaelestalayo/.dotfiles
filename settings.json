@@ -1,0 +1,278 @@
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "copyOnSelect": true,
+    "copyFormatting": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "initialCols": 120,
+    "initialRows": 45,
+    "theme": "dark",
+    "tabWidthMode": "compact",
+    "useTabSwitcher": false,
+    "profiles": {
+        "defaults": {
+            "bellStyle": "audible",
+            "colorScheme": "Mojave Dark",
+            "cursorColor": "#808080",
+            "cursorShape": "underscore",
+            "fontSize": 10,
+            "fontFace": "Cascadia Code",
+            "tabColor": "#282629",
+        },
+        "list": [
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": true
+            },
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": true
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "ssh keynetic@192.168.20.12",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f519}",
+                "icon": "https://media-exp1.licdn.com/dms/image/C4D0BAQFWJ88SszT_Zw/company-logo_200_200/0/1548423539931?e=2159024400&v=beta&t=CiK6w898fsgk8PwRUU5nfo-Nv6ELbqRuMK-KMCtiq08",
+                "hidden": false,
+                "name": "knt-data",
+                "suppressApplicationTitle": true
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Pencil Dark",
+            "background": "#212121",
+            "black": "#212121",
+            "blue": "#006e99",
+            "brightBlack": "#525252",
+            "brightBlue": "#20bbfc",
+            "brightCyan": "#4fb8cc",
+            "brightGreen": "#5fd7af",
+            "brightPurple": "#6855de",
+            "brightRed": "#fb007a",
+            "brightWhite": "#f1f1f1",
+            "brightYellow": "#f3e430",
+            "cyan": "#20a5ba",
+            "foreground": "#f1f1f1",
+            "green": "#10a778",
+            "purple": "#523c79",
+            "red": "#c30771",
+            "white": "#d9d9d9",
+            "yellow": "#a89c14"
+        },
+        {
+            "name": "Pencil Light",
+            "background": "#f1f1f1",
+            "black": "#212121",
+            "blue": "#0079a8",
+            "brightBlack": "#424242",
+            "brightBlue": "#20bbfc",
+            "brightCyan": "#4fb8cc",
+            "brightGreen": "#5fd7af",
+            "brightPurple": "#6855de",
+            "brightRed": "#fb007a",
+            "brightWhite": "#f1f1f1",
+            "brightYellow": "#ead38b",
+            "cyan": "#20a5ba",
+            "foreground": "#424242",
+            "green": "#10a778",
+            "purple": "#523c79",
+            "red": "#ea437d",
+            "white": "#494949",
+            "yellow": "#a89c14"
+        },
+        {
+            "name": "Afterglow",
+            "black": "#151515",
+            "red": "#ac4142",
+            "green": "#7e8e50",
+            "yellow": "#e5b567",
+            "blue": "#6c99bb",
+            "purple": "#9f4e85",
+            "cyan": "#7dd6cf",
+            "white": "#d0d0d0",
+            "brightBlack": "#505050",
+            "brightRed": "#ac4142",
+            "brightGreen": "#7e8e50",
+            "brightYellow": "#e5b567",
+            "brightBlue": "#6c99bb",
+            "brightPurple": "#9f4e85",
+            "brightCyan": "#7dd6cf",
+            "brightWhite": "#f5f5f5",
+            "background": "#212121",
+            "foreground": "#d0d0d0"
+        },
+        {
+            "name": "Themer Light",
+            "background": "#fffcff",
+            "foreground": "#474247",
+            "cursorColor": "#bf65f0",
+            "selectionBackground": "#53a6e1",
+            "black": "#474247",
+            "brightBlack": "#656066",
+            "red": "#f03e4d",
+            "brightRed": "#F36471",
+            "green": "#97bd2d",
+            "brightGreen": "#ACCA57",
+            "yellow": "#eeba21",
+            "brightYellow": "#F1C74D",
+            "blue": "#53a6e1",
+            "brightBlue": "#75B7E7",
+            "purple": "#bf65f0",
+            "brightPurple": "#CC83F3",
+            "cyan": "#1fc598",
+            "brightCyan": "#4CD0AD",
+            "white": "#c1bcc2",
+            "brightWhite": "#e0dce0"
+        },
+        {
+            "name": "Themer Dark",
+            "background": "#282629",
+            "foreground": "#e0dce0",
+            "cursorColor": "#cc78fa",
+            "selectionBackground": "#66bfff",
+            "black": "#656066",
+            "brightBlack": "#847e85",
+            "red": "#ff4050",
+            "brightRed": "#FF6673",
+            "green": "#a4cc35",
+            "brightGreen": "#B6D65D",
+            "yellow": "#ffd24a",
+            "brightYellow": "#FFDA6E",
+            "blue": "#66bfff",
+            "brightBlue": "#85CBFF",
+            "purple": "#cc78fa",
+            "brightPurple": "#D692FB",
+            "cyan": "#26c99e",
+            "brightCyan": "#51D3B1",
+            "white": "#e0dce0",
+            "brightWhite": "#fffcff"
+        },
+        {
+            "name": "Mojave Dark",
+            "background": "#222323",
+            "foreground": "#c2c2c2",
+            "cursorColor": "#a550a7",
+            "selectionBackground": "#007aff",
+            "black": "#575858",
+            "brightBlack": "#727373",
+            "red": "#ff5257",
+            "brightRed": "#F86E72",
+            "green": "#62ba46",
+            "brightGreen": "#7BC164",
+            "yellow": "#fbb927",
+            "brightYellow": "#F5C04B",
+            "blue": "#007aff",
+            "brightBlue": "#2C8EF8",
+            "purple": "#a550a7",
+            "brightPurple": "#B06CB2",
+            "cyan": "#00c7a3",
+            "brightCyan": "#2CCBAF",
+            "white": "#c2c2c2",
+            "brightWhite": "#dddddd"
+        },
+        {
+            "name": "Mojave Light",
+            "background": "#ffffff",
+            "foreground": "#464646",
+            "cursorColor": "#953d96",
+            "selectionBackground": "#007aff",
+            "black": "#464646",
+            "brightBlack": "#656565",
+            "red": "#e0383e",
+            "brightRed": "#E66065",
+            "green": "#62ba46",
+            "brightGreen": "#81C86B",
+            "yellow": "#fbb927",
+            "brightYellow": "#FCC752",
+            "blue": "#007aff",
+            "brightBlue": "#3395FF",
+            "purple": "#953d96",
+            "brightPurple": "#AA64AB",
+            "cyan": "#10b9a6",
+            "brightCyan": "#40C7B8",
+            "white": "#c1c1c1",
+            "brightWhite": "#e0e0e0"
+        }
+    ],
+    // Add custom actions and keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
+    "actions": [
+        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+        // To learn more about selection, visit https://aka.ms/terminal-selection
+        {
+            "command": {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        // Press Ctrl+Shift+F to open the search box
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": "togglePaneZoom",
+            "keys": "alt+shift+z"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "horizontal",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+-"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+plus"
+        }
+    ]
+}

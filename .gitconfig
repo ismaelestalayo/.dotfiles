@@ -1,0 +1,14 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = Ismael
+	email = ismael.em@outlook.com
+[core]
+	longpaths = true
+[credential]
+	helper = manager
+[includeIf "gitdir:C:/Users/ismae/Documents/Gitlab/"]
+    path = work.gitconfig
