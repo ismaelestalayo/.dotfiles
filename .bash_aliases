@@ -1,2 +1,2 @@
 alias pip=pip3
-alias bat=batcat
+alias bat="batcat --paging=never"
