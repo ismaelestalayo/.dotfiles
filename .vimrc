@@ -9,6 +9,7 @@ set pastetoggle=<F2>
 set scrolloff=3
 
 set wrap
+set hlsearch
 set textwidth=79
 
 set tabstop=4
