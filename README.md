@@ -50,7 +50,7 @@ echo 'set completion-ignore-case On' | sudo tee -a /etc/inputrc
 Lightweight personalized prompt:
 
 ```bash
-export PS1='\[\e[1;36m\] \n$PWD \[\e[1;35m\] \n\[\e[1;37m\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\] '
+export PS1='\[\e[38;5;12m\] \n$PWD \[\e[38;5;28m\] \n\\$\[$(tput sgr0)\] '
 ```
 
 It's always handy to make a few symbolic links to the Windows files you wanna access:
