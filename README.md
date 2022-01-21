@@ -13,6 +13,8 @@ Install-Module posh-git -Scope CurrentUser
 
 ```Powershell
 Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -BellStyle None
+
 Import-Module posh-git
 ```
 
